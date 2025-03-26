@@ -58,7 +58,7 @@ def display_order_summary(customer_name, senior_id):
     # Using '\t' for tab spacing to align the output neatly 
 
     for product in product_listing:
-        print(f"{product[0]}\t\t {product[1]}\t       "
+        print(f"{product[0]}\t\t {product[1]}\t\t" 
               f"{product[2]}\t {product[3]:.2f}")
         
     print("---------------------------------------------------")       
