@@ -51,7 +51,7 @@ def get_total_amount(senior_id):
         grand_total += product[3]
 
 def display_order_summary(customer_name, senior_id):
-    # TODO (Tolentino): Compute the grand total and display the order details
+    # TODO (Tolentino): Display the order details
     
     print("\n-------------------Order Summary-------------------")
     print("Product Name\t Price\t     Quantity\t Total")
