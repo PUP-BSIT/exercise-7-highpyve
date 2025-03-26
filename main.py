@@ -28,14 +28,29 @@ def customer_details():
     customer_name = input("Enter customer name: ")
     senior_id_number = input("Enter senior ID number (If applicable): ")
     calculate_total(senior_id_number)
-    display_summary(customer_name, senior_id_number)
+    display_order_summary(customer_name, senior_id_number)
 
 def calculate_total(senior_id_number):
     # TODO (Bartolome): Apply 10% discount if the customer has a senior ID
     pass
 
-def display_summary(customer_name, senior_id_number):
+def display_order_summary(customer_name, senior_id_number):
     # TODO (Tolentino): Compute the grand total and display the order details
-    pass
+    
+    print("\n-------------------Order Summary-------------------")
+    print("Product Name\t Price\t     Quantity\t Total")
+    # Using '\t' for tab spacing to align the output neatly 
+
+    for product in product_listing:
+        print(f"{product[0]}\t\t {product[1]}\t       "
+              f"{product[2]}\t {product[3]}")
+        
+    print("---------------------------------------------------")       
+    print(f"\nCustomer Name: {customer_name}")
+    
+    if senior_id_number:
+        print("Senior ID Number: ")
+        
+    print(f"Grand Total: {grand_total:.2f}")
 
 order_details()
