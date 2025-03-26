@@ -16,7 +16,7 @@ def add_product():
     # TODO (Bayos): Enter product details: name, price, and quantity
     # Append the entered details as a list
     product_name = input("Product Name: ")
-    price = int(input("Price: "))
+    price = float(input("Price: "))
     quantity = int(input("Quantity: "))
     total = price * quantity
     product_listing.append([product_name, price, quantity, total])
@@ -32,7 +32,14 @@ def customer_details():
 
 def calculate_total(senior_id_number):
     # TODO (Bartolome): Apply 10% discount if the customer has a senior ID
-    pass
+    global grand_total
+    grand_total = 0
+    if senior_id_number:
+        for product in product_listing:
+                product[3] = product[3] * 0.9
+
+    for product in product_listing:
+        grand_total += product[3]
 
 def display_order_summary(customer_name, senior_id_number):
     # TODO (Tolentino): Compute the grand total and display the order details
